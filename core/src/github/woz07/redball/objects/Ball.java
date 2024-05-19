@@ -15,7 +15,7 @@ import github.woz07.redball.objects.template.Entity;
 
 public class Ball extends Entity
 {
-    public Ball(int hp, int width, int height, Vector2 position, Texture image) {
-        super(hp, width, height, position, image);
+    public Ball(boolean hit, int width, int height, Vector2 position, Texture image) {
+        super(hit, width, height, position, image);
     }
 }

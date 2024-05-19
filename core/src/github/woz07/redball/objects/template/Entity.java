@@ -15,26 +15,26 @@ import com.badlogic.gdx.math.Vector2;
 public class Entity
 {
     // Base features of an entity
-    private double hp;              // The health of the entity
+    private boolean hit;            // If hit then game is over
     private double width, height;   // The dimensions of the entity
     private Vector2 position;       // The x & y of the entity
     private Texture image;          // The image to render of the entity
     
-    public Entity(int hp, int width, int height, Vector2 position, Texture image)
+    public Entity(boolean hit, int width, int height, Vector2 position, Texture image)
     {
-        this.hp       = hp;
+        this.hit       = hit;
         this.width    = width;
         this.height   = height;
         this.position = position;
         this.image    = image;
     }
     
-    public double getHp() {
-        return hp;
+    public boolean isHit() {
+        return hit;
     }
     
-    public void setHp(double hp) {
-        this.hp = hp;
+    public void setHp(boolean hit) {
+        this.hit = hit;
     }
     
     public double getWidth() {
