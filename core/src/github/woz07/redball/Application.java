@@ -5,18 +5,30 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
 
-public class Game extends ApplicationAdapter {
+/**
+ * Application.java
+ *
+ * The logic of the application
+ *
+ * @author	woz07
+ * @date	19/05/2024
+ */
+
+public class Application extends ApplicationAdapter
+{
 	SpriteBatch batch;
 	Texture img;
 	
 	@Override
-	public void create () {
+	public void create()
+	{
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
 	}
 
 	@Override
-	public void render () {
+	public void render()
+	{
 		ScreenUtils.clear(1, 0, 0, 1);
 		batch.begin();
 		batch.draw(img, 0, 0);
@@ -24,7 +36,8 @@ public class Game extends ApplicationAdapter {
 	}
 	
 	@Override
-	public void dispose () {
+	public void dispose()
+	{
 		batch.dispose();
 		img.dispose();
 	}
