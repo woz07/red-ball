@@ -16,6 +16,7 @@ public class Entity
 {
     // Base features of an entity
     private int hp;                 // The hp of the entity
+    private int speed;              // The speed of the entity
     private double width, height;   // The dimensions of the entity
     private Vector2 position;       // The x & y of the entity
     private Texture image;          // The image to render of the entity
@@ -32,40 +33,52 @@ public class Entity
     public int getHp() {
         return hp;
     }
-    
-    public void setHit(int hp) {
+    public void setHit(int hp)
+    {
         this.hp = hp;
     }
     
-    public double getWidth() {
+    public double getWidth()
+    {
         return width;
     }
-    
-    public void setWidth(double width) {
+    public void setWidth(double width)
+    {
         this.width = width;
     }
     
-    public double getHeight() {
-        return height;
+    public int getSpeed() {
+        return speed;
+    }
+    public void setSpeed(int speed)
+    {
+        this.speed = speed;
     }
     
-    public void setHeight(double height) {
+    public double getHeight()
+    {
+        return height;
+    }
+    public void setHeight(double height)
+    {
         this.height = height;
     }
     
-    public Vector2 getPosition() {
+    public Vector2 getPosition()
+    {
         return position;
     }
-    
-    public void setPosition(Vector2 position) {
+    public void setPosition(Vector2 position)
+    {
         this.position = position;
     }
     
-    public Texture getImage() {
+    public Texture getImage()
+    {
         return image;
     }
-    
-    public void setImage(Texture image) {
+    public void setImage(Texture image)
+    {
         this.image = image;
     }
 }

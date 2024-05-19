@@ -15,7 +15,25 @@ import github.woz07.redball.objects.template.Entity;
 
 public class Ball extends Entity
 {
+    // Extra must have features of the ball class
+    private Vector2 velocity;   // The velocity of the ball
+    private double bounce;      // The bounce multiplier
+    
     public Ball(int hp, int width, int height, Vector2 position, Texture image) {
         super(hp, width, height, position, image);
+    }
+    
+    public Vector2 getVelocity() {
+        return velocity;
+    }
+    public void setVelocity(Vector2 velocity) {
+        this.velocity = velocity;
+    }
+    
+    public double getBounce() {
+        return bounce;
+    }
+    public void setBounce(double bounce) {
+        this.bounce = bounce;
     }
 }
