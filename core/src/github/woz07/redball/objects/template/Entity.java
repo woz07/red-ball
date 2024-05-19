@@ -33,7 +33,7 @@ public class Entity
         return hit;
     }
     
-    public void setHp(boolean hit) {
+    public void setHit(boolean hit) {
         this.hit = hit;
     }
     
