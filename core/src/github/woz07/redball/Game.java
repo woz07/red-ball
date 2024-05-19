@@ -6,15 +6,15 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
 
 /**
- * Application.java
+ * Game.java
  *
- * The logic of the application
+ * The logic of the game
  *
  * @author	woz07
  * @date	19/05/2024
  */
 
-public class Application extends ApplicationAdapter
+public class Game extends ApplicationAdapter
 {
 	SpriteBatch batch;
 	Texture img;
