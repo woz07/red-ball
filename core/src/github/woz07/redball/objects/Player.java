@@ -15,7 +15,7 @@ import github.woz07.redball.objects.template.Entity;
 
 public class Player extends Entity
 {
-    public Player(int hp, int width, int height, Vector2 position, Texture image) {
-        super(hp, width, height, position, image);
+    public Player(int hp, int speed, int width, int height, Vector2 position, Texture image) {
+        super(hp, speed, width, height, position, image);
     }
 }

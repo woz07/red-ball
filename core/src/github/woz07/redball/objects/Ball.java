@@ -19,8 +19,8 @@ public class Ball extends Entity
     private Vector2 velocity;   // The velocity of the ball
     private double bounce;      // The bounce multiplier
     
-    public Ball(int hp, int width, int height, Vector2 position, Texture image) {
-        super(hp, width, height, position, image);
+    public Ball(int hp, int speed, int width, int height, Vector2 position, Texture image) {
+        super(hp, speed, width, height, position, image);
     }
     
     public Vector2 getVelocity() {

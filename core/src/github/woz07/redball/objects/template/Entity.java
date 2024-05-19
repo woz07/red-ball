@@ -21,9 +21,10 @@ public class Entity
     private Vector2 position;       // The x & y of the entity
     private Texture image;          // The image to render of the entity
     
-    public Entity(int hp, int width, int height, Vector2 position, Texture image)
+    public Entity(int hp, int speed, int width, int height, Vector2 position, Texture image)
     {
         this.hp       = hp;
+        this.speed    = speed;
         this.width    = width;
         this.height   = height;
         this.position = position;
