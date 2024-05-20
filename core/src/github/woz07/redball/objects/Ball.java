@@ -23,6 +23,15 @@ public class Ball extends Entity
         super(hp, speed, width, height, position, image);
     }
     
+    /**
+     * Method to move ball to a new position
+     * @param newPos The new position of the ball
+     */
+    public void move(Vector2 newPos)
+    {
+        this.setPosition(newPos);
+    }
+    
     public Vector2 getVelocity()
     {
         return velocity;
