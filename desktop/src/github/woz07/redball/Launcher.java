@@ -19,7 +19,7 @@ public class Launcher
 	{
 		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
 		config.setForegroundFPS(60);
-		config.setTitle("Red Ball");
+		config.setTitle("Red Ball v1");
 		new Lwjgl3Application(new Game(), config);
 	}
 }
