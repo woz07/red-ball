@@ -31,7 +31,8 @@ public class Entity
         this.image    = image;
     }
     
-    public int getHp() {
+    public int getHp()
+    {
         return hp;
     }
     public void setHit(int hp)
