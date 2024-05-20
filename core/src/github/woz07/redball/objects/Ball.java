@@ -23,17 +23,21 @@ public class Ball extends Entity
         super(hp, speed, width, height, position, image);
     }
     
-    public Vector2 getVelocity() {
+    public Vector2 getVelocity()
+    {
         return velocity;
     }
-    public void setVelocity(Vector2 velocity) {
+    public void setVelocity(Vector2 velocity)
+    {
         this.velocity = velocity;
     }
     
-    public double getBounce() {
+    public double getBounce()
+    {
         return bounce;
     }
-    public void setBounce(double bounce) {
+    public void setBounce(double bounce)
+    {
         this.bounce = bounce;
     }
 }
