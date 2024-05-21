@@ -13,8 +13,8 @@ import github.woz07.redball.objects.Player;
  *
  * The logic of the game
  *
- * @author	woz07
- * @date	19/05/2024
+ * @author 	woz07
+ * @date 	19/05/2024
  */
 
 public class Game extends ApplicationAdapter
@@ -31,16 +31,19 @@ public class Game extends ApplicationAdapter
 		int testSpawnY = 150;
 		Texture texture = new Texture("player.png");
 		Sprite img = new Sprite(texture);
+		img.setScale(1.5f);
 		player = new Player(100, 10, 32, 32, new Vector2(testSpawnX, testSpawnY), img);
-		// Research using sprite instead of Texture.
 	}
-
+	
 	@Override
 	public void render()
 	{
 		ScreenUtils.clear(1, 1, 1, 1);
 		batch.begin();
-		batch.draw(player.getImage(), player.getPosition().x, player.getPosition().y);
+		
+		player.getImage().setPosition(player.getPosition().x, 10); // 10 just works
+		player.getImage().draw(batch);
+		
 		batch.end();
 	}
 	

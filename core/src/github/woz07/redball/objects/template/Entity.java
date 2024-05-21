@@ -20,7 +20,7 @@ public class Entity
     private int speed;              // The speed of the entity
     private double width, height;   // The dimensions of the entity
     private Vector2 position;       // The x & y of the entity
-    private Sprite image;          // The image to render of the entity
+    private Sprite image;           // The image to render of the entity
     
     public Entity(int hp, int speed, int width, int height, Vector2 position, Sprite image)
     {
