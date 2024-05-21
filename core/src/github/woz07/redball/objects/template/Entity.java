@@ -36,7 +36,7 @@ public class Entity
     {
         return hp;
     }
-    public void setHit(int hp)
+    public void setHp(int hp)
     {
         this.hp = hp;
     }

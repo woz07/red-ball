@@ -11,10 +11,8 @@ import github.woz07.redball.objects.template.Entity;
  */
 public class Bullet extends Entity
 {
-    public Bullet(int hp, int speed, int width, int height, Vector2 position, Sprite image)
+    public Bullet(int damage, int speed, int width, int height, Vector2 position, Sprite image)
     {
-        super(hp, speed, width, height, position, image);
+        super(damage, speed, width, height, position, image);
     }
-    
-    
 }
