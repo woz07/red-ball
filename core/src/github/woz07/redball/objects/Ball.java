@@ -1,6 +1,7 @@
 package github.woz07.redball.objects;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
 import github.woz07.redball.objects.template.Entity;
 
@@ -19,7 +20,7 @@ public class Ball extends Entity
     private Vector2 velocity;   // The velocity of the ball
     private double bounce;      // The bounce multiplier
     
-    public Ball(int hp, int speed, int width, int height, Vector2 position, Texture image) {
+    public Ball(int hp, int speed, int width, int height, Vector2 position, Sprite image) {
         super(hp, speed, width, height, position, image);
     }
     

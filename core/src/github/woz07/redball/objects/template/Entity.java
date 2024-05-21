@@ -1,6 +1,7 @@
 package github.woz07.redball.objects.template;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
 
 /**
@@ -19,9 +20,9 @@ public class Entity
     private int speed;              // The speed of the entity
     private double width, height;   // The dimensions of the entity
     private Vector2 position;       // The x & y of the entity
-    private Texture image;          // The image to render of the entity
+    private Sprite image;          // The image to render of the entity
     
-    public Entity(int hp, int speed, int width, int height, Vector2 position, Texture image)
+    public Entity(int hp, int speed, int width, int height, Vector2 position, Sprite image)
     {
         this.hp       = hp;
         this.speed    = speed;
@@ -75,11 +76,11 @@ public class Entity
         this.position = position;
     }
     
-    public Texture getImage()
+    public Sprite getImage()
     {
         return image;
     }
-    public void setImage(Texture image)
+    public void setImage(Sprite image)
     {
         this.image = image;
     }

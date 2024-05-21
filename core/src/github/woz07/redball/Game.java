@@ -2,6 +2,7 @@ package github.woz07.redball;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.ScreenUtils;
@@ -28,7 +29,10 @@ public class Game extends ApplicationAdapter
 		
 		int testSpawnX = 150;
 		int testSpawnY = 150;
-		player = new Player(100, 10, 32, 32, new Vector2(testSpawnX, testSpawnY), new Texture("player.png"));
+		Texture texture = new Texture("player.png");
+		Sprite img = new Sprite(texture);
+		player = new Player(100, 10, 32, 32, new Vector2(testSpawnX, testSpawnY), img);
+		// Research using sprite instead of Texture.
 	}
 
 	@Override
@@ -44,6 +48,6 @@ public class Game extends ApplicationAdapter
 	public void dispose()
 	{
 		batch.dispose();
-		player.getImage().dispose();
+		player.getImage().getTexture().dispose();
 	}
 }
