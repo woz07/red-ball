@@ -75,6 +75,14 @@ public class Entity
     {
         this.position = position;
     }
+    public void setX(int x)
+    {
+        this.position.x = x;
+    }
+    public void setY(int y)
+    {
+        this.position.y = y;
+    }
     
     public Sprite getImage()
     {
