@@ -30,8 +30,9 @@ public class Game extends ApplicationAdapter
 	{
 		batch = new SpriteBatch();
 		
-		int testSpawnX = 150;
-		int testSpawnY = 150;
+		int playerWidth = 32; // test reasons
+		int testSpawnX = (Gdx.graphics.getWidth() / 2) - (playerWidth / 2); // so player spawns in the middle
+		int testSpawnY = 0; // 0 as always set up by itself
 		Texture texture = new Texture("player.png");
 		Sprite img = new Sprite(texture);
 		img.setScale(4f); // for testing reasons this is still here
