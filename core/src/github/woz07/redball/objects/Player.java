@@ -18,5 +18,6 @@ public class Player extends Entity
 {
     public Player(int hp, int speed, int width, int height, Vector2 position, Sprite image) {
         super(hp, speed, width, height, position, image);
+//        image.setScale(1.5f);     removed for testing reasons
     }
 }
