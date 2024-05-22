@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.ScreenUtils;
+import github.woz07.redball.objects.Bullet;
 import github.woz07.redball.objects.Player;
 
 /**
@@ -44,12 +45,25 @@ public class Game extends ApplicationAdapter
 	{
 		ScreenUtils.clear(1, 1, 1, 1);
 		
-		ListenAndHandleInput(Gdx.graphics.getDeltaTime());
+		listenAndHandleInput(Gdx.graphics.getDeltaTime());
 		
 		batch.begin();
 		
 		player.getImage().setPosition(player.getPosition().x, (int) player.getImage().getScaleY() * 10 + 8); // +8 works for some odd reason
 		player.getImage().draw(batch);
+		
+		// Move bullets
+		if (player.getBullets() != null)
+		{
+			player.moveBullets(Gdx.graphics.getDeltaTime());
+		}
+		
+		// Draw bullets
+		for (Bullet bullet : player.getBullets())
+		{
+			bullet.getImage().setPosition(bullet.getPosition().x, bullet.getPosition().y);
+			bullet.getImage().draw(batch);
+		}
 		
 		batch.end();
 	}
@@ -67,8 +81,10 @@ public class Game extends ApplicationAdapter
 	 *
 	 * @param delta Delta time
 	 */
-	private void ListenAndHandleInput(float delta)
+	private void listenAndHandleInput(float delta)
 	{
+		// MOVEMENT
+		
 		if (Gdx.input.isKeyPressed(Input.Keys.LEFT) || Gdx.input.isKeyPressed(Input.Keys.A))
 		{
 			if (player.getPosition().x - player.getWidth() > 0)
@@ -83,6 +99,13 @@ public class Game extends ApplicationAdapter
 			{
 				player.getPosition().x += player.getSpeed() * delta;
 			}
+		}
+		
+		// SHOOTING
+		
+		if (Gdx.input.isKeyPressed(Input.Keys.SPACE))
+		{
+			player.spawnBullet();
 		}
 	}
 }

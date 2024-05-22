@@ -22,6 +22,9 @@ public class Entity
     private Vector2 position;       // The x & y of the entity
     private Sprite image;           // The image to render of the entity
     
+    public Entity() // Empty constructor used by Bullet.java
+    {}
+    
     public Entity(int hp, int speed, int width, int height, Vector2 position, Sprite image)
     {
         this.hp       = hp;
